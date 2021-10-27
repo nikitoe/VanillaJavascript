@@ -34,4 +34,7 @@ console.log("your new name is " + myNameIs);
 
 //#2.4 Booleans
 
- 
+const amYouFat= true;   //Python에서는 True(False)
+const amIFat = null;    //Python에서는 none, null 값이 비어있는 상태
+let something;  //undefiend 메모리는 만들어져있지만 값이 정의되어 있지 않은 상태
+console.log(something, amIFat);
