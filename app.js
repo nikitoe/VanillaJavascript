@@ -38,3 +38,31 @@ const amYouFat= true;   //Python에서는 True(False)
 const amIFat = null;    //Python에서는 none, null 값이 비어있는 상태
 let something;  //undefiend 메모리는 만들어져있지만 값이 정의되어 있지 않은 상태
 console.log(something, amIFat);
+
+//#2.5 Arrays
+
+const mon = "mon";
+const tue = "tue";
+const wed = "wed";
+const thu = "thu";
+const fri = "fri";
+const sat = "sat";
+const sun = "sun";
+
+const daysOfWeek = ["mon", "tue", "wed", "thu", "fri", "sat"];
+
+const nonesense = [1, 2, "hello", true, false, null, undefined, "jiyong"];
+
+//array에서 item받아오기
+console.log(daysOfWeek[5]);
+
+//array안에 요일 더 추가하기 
+daysOfWeek.push("sun");
+
+console.log(daysOfWeek);
+
+const apple
+
+/*정리
+    array의 목적은 하나의 variable 안에 테이터의 list를 갖는 것
+*/
