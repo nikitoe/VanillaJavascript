@@ -126,3 +126,29 @@ const playerFunc = {
 
 console.log(playerFunc.name);
 playerFunc.sayHello("nico");
+
+//#2.9~10 Recap 
+
+const calculater = {
+    add: function(a, b) {
+        console.log(a + b);
+    },
+    minus: function(a, b) {
+        console.log(a - b);
+    },
+    divide: function(a, b) {
+        console.log(a / b);
+    },
+    multi: function(a, b) {
+        console.log(a * b);
+    },
+    powerof: function(a, b) {
+        console.log(a ** b);
+    }
+}
+
+calculater.add(50, 20);
+calculater.minus(20, 10);
+calculater.divide(35, 20);
+calculater.multi(55, 20);
+calculater.powerof(10, 10);
