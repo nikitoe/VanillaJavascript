@@ -61,8 +61,30 @@ daysOfWeek.push("sun");
 
 console.log(daysOfWeek);
 
-const apple
-
 /*정리
     array의 목적은 하나의 variable 안에 테이터의 list를 갖는 것
 */
+
+//#2.6 Objects 
+
+const player = {
+    name: "jiyong",
+    points: 10,
+    fat: true,
+};
+
+console.log(player);                //object를 전체 출력한 방법
+console.log(player.name);           //object안의 내용을 출력한 방법
+console.log(player["name"]);        //object안의 내용을 출력한 방법
+
+console.log(player);
+player.fat = false;                 //object안의 내용 변경 가능
+console.log(player);
+
+console.log(player);
+player.lastName = "sim";            //object안의 내용 추가 가능
+console.log(player);
+
+console.log(player.points);
+player.points = player.points + 15; //oject의 내용을 불러와서 연산 가능
+console.log(player.points);
