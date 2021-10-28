@@ -152,3 +152,26 @@ calculater.minus(20, 10);
 calculater.divide(35, 20);
 calculater.multi(55, 20);
 calculater.powerof(10, 10);
+
+//#2.11 Returns 
+
+const calculaterSecond = {
+    plus: function(a, b) {
+        return a + b;
+    },
+    minus: function(a, b) {
+        return a - b;
+    },
+    divide: function(a, b) {
+        return a / b;
+    },
+    multi: function(a, b) {
+        return a * b;
+    },
+    powerof: function(a, b) {
+        return a ** b;
+    }
+}
+
+const plusResult = calculaterSecond.plus(10,2);
+const minusResult = calculaterSecond.minus(plusResult,3);
