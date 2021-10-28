@@ -85,6 +85,44 @@ console.log(player);
 player.lastName = "sim";            //object안의 내용 추가 가능
 console.log(player);
 
-console.log(player.points);
+console.log(player.points); 
 player.points = player.points + 15; //oject의 내용을 불러와서 연산 가능
 console.log(player.points);
+
+//#2.7 Functions part
+
+/**정리
+ * function은 계속 반복해서 사용할 수 있는 코드 조각
+ * 또한 어떤 코드를 캡슐화해서 실행을 여러 번 할 수 있게 해준다.
+ * 
+ * argument는 function을 실행하는 동안 어떤 정보를  function에게 보낼 수 있는 방법
+ */
+
+function sayHello(nameOfPerson, age){
+    console.log("Hello my name is " + nameOfPerson + " and I'm "+ age);
+}
+
+sayHello("jiyong", 10);
+sayHello("nico", 23); 
+sayHello("dal", 21);
+
+function plus(firstNumber, secondNumber) {
+    console.log(firstNumber + secondNumber);
+}
+
+function divide(a, b) {
+    console.log(a / b);
+}
+
+plus(8,60);
+divide(90, 54);
+
+const playerFunc = {
+    name: "jiyong",
+    sayHello: function(otherPersonName) {
+        console.log("Hello " + otherPersonName + " nice to meet you");
+    }
+}
+
+console.log(playerFunc.name);
+playerFunc.sayHello("nico");
