@@ -177,7 +177,19 @@ const plusResult = calculaterSecond.plus(10,2);
 const minusResult = calculaterSecond.minus(plusResult,3);
 
 //#2.13 Conditionals
-
+/**
+ * typeof : 데이터 타입
+ * NaN : Not a Number
+ * isNaN : is Not a number 
+ */
 const age = parseInt(prompt("how old are you"));
 
 console.log(age);
+
+if(isNaN(age)){
+    console.log("Please write a number");
+} else {
+    console.log("Thank you for writing your age");
+}
+
+console.log(typeof age);
