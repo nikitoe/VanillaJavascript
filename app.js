@@ -180,7 +180,8 @@ const minusResult = calculaterSecond.minus(plusResult,3);
 /**
  * typeof : 데이터 타입
  * NaN : Not a Number
- * isNaN : is Not a number 
+ * isNaN : is Not a number \
+ * Operater :  연산자
  */
 const age = parseInt(prompt("how old are you"));
 
@@ -197,3 +198,6 @@ if(isNaN(age) || age < 0){
 } else if (age > 80) {
     console.log("You can do whatever you want");
 } 
+
+
+//#3.0 The Document Object
