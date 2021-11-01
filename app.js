@@ -220,3 +220,27 @@ if(isNaN(age) || age < 0){
 
  console.log(title.id);             //HTML에서 id에대한 정보를 가져온다/
  console.log(title.className);      //HTML에서 class에대한 정보를 가져온다.
+
+ //#3.2 Searching For Elements 
+ /**
+  * getElementsByClassName
+  * querySelector : CSS selector를 사용하여 검색 가능, array가 아닌 하나의 element 읽기 가능
+  * querySelectorAll : CSS selector를 사용하여 검색 가능,array를 통해 모든 element 읽기 가능
+  * 
+  * ## 
+  * const titleOne = document.getElementsById("title");과 
+  * const titleOne = document.document.querySelector("#title");
+  * 은 같은 의미로 id를 통해 element를 찾아준다.
+  * ##
+  */
+
+ const hellos = document.getElementsByClassName("hello");
+
+ const titleOne = document.querySelector(".hello h1");
+
+ const titleAll = document.querySelectorAll(".hello h1");
+
+ console.log(titleOne);
+ console.log(titleAll);
+ titleOne.innerText="Hello!!!!!";
+
