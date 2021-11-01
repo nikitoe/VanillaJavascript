@@ -208,6 +208,15 @@ if(isNaN(age) || age < 0){
 
  //#3.1 HTML in Javascript
  /**
-  * 
+  * id, innetText, className등을 통해 HTML의 element를 읽거나 수정할 수 있다.
   * 
   */
+
+ const title = document.getElementById("title");    //document object의 getElementById함수를 사용하여, HTML에서 id를 통해 element를 찾아준다.
+
+ console.dir(title);                // 해당 element의 object정보를 다 가져온다.
+ 
+ title.innerText = "Got you";
+
+ console.log(title.id);             //HTML에서 id에대한 정보를 가져온다/
+ console.log(title.className);      //HTML에서 class에대한 정보를 가져온다.
