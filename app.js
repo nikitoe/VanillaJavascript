@@ -201,3 +201,13 @@ if(isNaN(age) || age < 0){
 
 
 //#3.0 The Document Object
+/**
+ * document.title, document.body등을 통해서 Javascript에서 HTML을 읽어 올 수도 있고 수정할 수도 있다.
+ * 
+ */
+
+ //#3.1 HTML in Javascript
+ /**
+  * 
+  * 
+  */
