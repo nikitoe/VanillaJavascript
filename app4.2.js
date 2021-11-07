@@ -1,5 +1,5 @@
 //#4.2 Events
-
+//#4.3 Events part Two
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
 
@@ -9,3 +9,6 @@ function onLoginSubmit (event) {
 }
 
 loginForm.addEventListener("submit", onLoginSubmit)                     //submit이라는 event가 발생하면 onLoginSubmit function을 실행시킨다.
+
+
+
