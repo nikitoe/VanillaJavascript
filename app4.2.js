@@ -13,7 +13,8 @@ function onLoginSubmit (event) {
     event.preventDefault();                                             //preventDefault란 어떤 event의 기본 행동(브라우저가 기본적으로 하는 function)이든지 발생되지 않도록 막는 것.
     loginForm.classList.add(HIDDEN_CLASSNAME);                                  //loginFrom이란 html element에 class hidden을 추가함으로써 화면에 안보이게한다.
     const username = loginInput.value;                                  //변수 username에 loginInput안에있는 값을 저장한다. 
-    
+    localStorage.setItem("username", username);                         //setItem을 사용하여,localStorage에 username을 저장한다.
+   
     //greeting.innerText = "Hello" + username;                          //둘다 string이랑 변수를 하나로 합쳐준다. ${username}방식을 선호함
     greeting.innerText = `Hello ${username}`;                           //
    
