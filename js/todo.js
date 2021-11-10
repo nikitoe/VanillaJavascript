@@ -1,17 +1,32 @@
 //#7.0 Setup
 //#7.1 Adding ToDos
 //#7.2 Deleting To Dos
+/**
+ * event.target.parentElement : click된 html element의 parentElement(클린된 element의 부모), parentNode를 찾는다
+ * 
+ */
+//#7.3 Saving To Dos
+/**
+ * JSON.stringify() : javascript object나 array 등을 string으로 바꿔줌
+ */
 
 const toDoForm = document.querySelector("#todo-form");
 const toDoInput = document.querySelector("#todo-form input");
 const toDoList = document.querySelector("#todo-list");
+
+const toDos = [];
+
+function saveToDos () {
+    localStorage.setItem("toDos", JSON.stringify(toDos));           //toDos array의 내용을 localStorage에 넣음
+}
+
 
 function deleteToDo (event) {
     //console.log(event.target);
     //console.dir(event.target);                      //click된 html element의 parentElement(클린된 element의 부모), parentNode를 찾는다
     //console.dir(event.target.parentElement);          
     //console.dir(event.target.parentElement.innerText);//parentElement에 값을 추가한다. 
-    const li = event.target.parentElement;
+    const li = event.target.parentElement;          //taget은 button이고 그 button의 부모인 li에 접근할 수 있다.
     li.remove();
 }
 
@@ -34,7 +49,9 @@ function handleToDoSubmit (event) {
     event.preventDefault();
     const newTodo = toDoInput.value;
     toDoInput.value = "";
+    toDos.push(newTodo);
     paintToDo(newTodo);
+    saveToDos();
 }
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
