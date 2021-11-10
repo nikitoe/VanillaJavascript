@@ -21,6 +21,8 @@
 
 //#7.6 Deleting To Dos part One
 
+//#7.8 Deleting To Dos part Three 
+
 const toDoForm = document.querySelector("#todo-form");
 const toDoInput = document.querySelector("#todo-form input");
 const toDoList = document.querySelector("#todo-list");
@@ -41,6 +43,8 @@ function deleteToDo (event) {
     //console.dir(event.target.parentElement.innerText);//parentElement에 값을 추가한다. 
     const li = event.target.parentElement;          //taget은 button이고 그 button의 부모인 li에 접근할 수 있다.
     li.remove();
+    toDos = toDos.filter(toDo =>toDo.id !== parseInt(li.id));   //filter 안의 fucntion은 무조건 true가 나와야되므로, 클릭한 항목과 li의 id 는 false로하고 다른 항목은 true로 하게 만든다
+    saveToDos();
 }
 
 
@@ -74,10 +78,7 @@ function handleToDoSubmit (event) {
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
 
-
-
 const savedToDos = localStorage.getItem(TODOS_KEY);
-console.log(savedToDos);
 
 if (savedToDos !== null) {
     const paresdToDos = JSON.parse(savedToDos);
