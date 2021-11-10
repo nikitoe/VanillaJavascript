@@ -17,13 +17,15 @@
  * 
  */
 
+//#7.5 Loading To Dos part Two
+
 const toDoForm = document.querySelector("#todo-form");
 const toDoInput = document.querySelector("#todo-form input");
 const toDoList = document.querySelector("#todo-list");
 
 const TODOS_KEY = "todos";
 
-const toDos = [];
+let toDos = [];
 
 function saveToDos () {
     localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));           //toDos array의 내용을 localStorage에 넣음
@@ -72,9 +74,10 @@ console.log(savedToDos);
 
 if (savedToDos !== null) {
     const paresdToDos = JSON.parse(savedToDos);
-    paresdToDos.forEach((item) => console.log("this is the turn of ", item));                 //forEach는 array의 각 item에 대해 function을 실행하게 해줌.
+    toDos = paresdToDos;
+    paresdToDos.forEach(paintToDo);                 //forEach는 array의 각 item에 대해 function을 실행하게 해줌.
     /**
-     * 위에 (item) => console.log("this is the turn of ", item)  과 같은 의미이다(arrow function 이라고도 함)
+     * (item) => console.log("this is the turn of ", item)  과 같은 의미이다(arrow function 이라고도 함)
      * function sayHello (item) {
     console.log("this is the turn of", item);
     }
