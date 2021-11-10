@@ -10,14 +10,23 @@
  * JSON.stringify() : javascript object나 array 등을 string으로 바꿔줌
  */
 
+//#7.4 Loading To Dos part One
+/**
+ * JSON.parse() : string을 javascript object나 array등으로 바꿔줌
+ * arrow function : (item) => console.log("this is the turn of ", item)
+ * 
+ */
+
 const toDoForm = document.querySelector("#todo-form");
 const toDoInput = document.querySelector("#todo-form input");
 const toDoList = document.querySelector("#todo-list");
 
+const TODOS_KEY = "todos";
+
 const toDos = [];
 
 function saveToDos () {
-    localStorage.setItem("toDos", JSON.stringify(toDos));           //toDos array의 내용을 localStorage에 넣음
+    localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));           //toDos array의 내용을 localStorage에 넣음
 }
 
 
@@ -55,3 +64,19 @@ function handleToDoSubmit (event) {
 }
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
+
+
+
+const savedToDos = localStorage.getItem(TODOS_KEY);
+console.log(savedToDos);
+
+if (savedToDos !== null) {
+    const paresdToDos = JSON.parse(savedToDos);
+    paresdToDos.forEach((item) => console.log("this is the turn of ", item));                 //forEach는 array의 각 item에 대해 function을 실행하게 해줌.
+    /**
+     * 위에 (item) => console.log("this is the turn of ", item)  과 같은 의미이다(arrow function 이라고도 함)
+     * function sayHello (item) {
+    console.log("this is the turn of", item);
+    }
+     */
+};
