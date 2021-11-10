@@ -19,6 +19,8 @@
 
 //#7.5 Loading To Dos part Two
 
+//#7.6 Deleting To Dos part One
+
 const toDoForm = document.querySelector("#todo-form");
 const toDoInput = document.querySelector("#todo-form input");
 const toDoList = document.querySelector("#todo-list");
@@ -44,8 +46,9 @@ function deleteToDo (event) {
 
 function paintToDo (newTodo) {
     const li = document.createElement("li");        //javascript에서 html태그 li를 생성
+    li.id = newTodo.id;
     const span = document.createElement("span");    //javascript에서 html태그 span를 생성
-    span.innerText = newTodo;                       //변수 span newTodo항목을 추가
+    span.innerText = newTodo.text;                       //변수 span newTodo항목을 추가
     const button = document.createElement("button");//javascript에서 html태그 button을 생성
     button.innerText = "X";
     button.addEventListener("click", deleteToDo)
@@ -60,8 +63,12 @@ function handleToDoSubmit (event) {
     event.preventDefault();
     const newTodo = toDoInput.value;
     toDoInput.value = "";
-    toDos.push(newTodo);
-    paintToDo(newTodo);
+    const newTodoObj ={
+        text: newTodo,
+        id: Date.now()
+    };
+    toDos.push(newTodoObj);
+    paintToDo(newTodoObj);
     saveToDos();
 }
 
