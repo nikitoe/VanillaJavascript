@@ -1,8 +1,8 @@
 # VanillaJavascript
 
-JavaScript
+*JavaScript
 
-HTML5
+*HTML5
 
-Open Weather API
+*Open Weather API
 
