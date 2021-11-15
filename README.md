@@ -1,8 +1,10 @@
 # VanillaJavascript
 
-* JavaScript
+* Using
+  * JavaScript
+  * HTML5
+  * CSS
 
-* HTML5
-
-* Open Weather API
+* Application
+  * Open Weather API
 
